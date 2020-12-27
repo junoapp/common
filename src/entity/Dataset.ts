@@ -12,4 +12,7 @@ export interface DatasetInterface {
   filename: string;
   tableName: string;
   columns: DatasetColumnInterface[];
+
+  createdDate: Date;
+  updatedDate: Date;
 }
