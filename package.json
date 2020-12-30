@@ -17,7 +17,8 @@
     "lint": "tsdx lint",
     "prepare": "tsdx build",
     "size": "size-limit",
-    "analyze": "size-limit --why"
+    "analyze": "size-limit --why",
+    "yalc:publish": "yalc publish"
   },
   "peerDependencies": {},
   "husky": {
@@ -50,6 +51,10 @@
     "size-limit": "^4.9.1",
     "tsdx": "^0.14.1",
     "tslib": "^2.0.3",
-    "typescript": "^4.1.3"
+    "typescript": "^4.1.3",
+    "yalc": "^1.0.0-pre.49"
+  },
+  "dependencies": {
+    "compassql": "^0.21.2"
   }
 }
