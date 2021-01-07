@@ -6,3 +6,5 @@ export * from './dto/DatasetRecommendation';
 export * from './dto/DatasetSpecEncoding';
 export * from './dto/DatasetChartSpec';
 export * from './dto/UserAdd';
+export * from './entity/Dashboard';
+export * from './dto/DashboardUpdate';

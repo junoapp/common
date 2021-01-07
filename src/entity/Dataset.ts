@@ -1,3 +1,4 @@
+import { DashboardInterface } from './Dashboard';
 import { DatasetColumnInterface } from './DatasetColumn';
 
 export interface DatasetInterface {
@@ -12,6 +13,7 @@ export interface DatasetInterface {
   filename: string;
   tableName: string;
   columns: DatasetColumnInterface[];
+  dashboard: DashboardInterface;
 
   createdDate: Date;
   updatedDate: Date;
