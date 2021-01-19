@@ -1,28 +1,24 @@
-import { DatasetInterface } from './Dataset';
-import { UserInterface } from './User';
+import { BasicColumnsInterface } from './BasicColumns';
+import { UserDatasetInterface } from './UserDataset';
 
-export interface DashboardInterface {
+export interface DashboardInterface extends BasicColumnsInterface {
   id: number;
   name?: string;
-  goal?: DashboardGoal;
-  purpose?: DashboardPurpose;
-  datasets: DatasetInterface[];
-  user: UserInterface;
-
-  createdDate: Date;
-  updatedDate: Date;
+  goalType?: DashboardGoal;
+  goalPurpose?: DashboardPurpose;
+  userDatasets: UserDatasetInterface[];
 }
 
 export enum DashboardGoal {
-  DECISION_MAKING = 'DECISION_MAKING',
-  AWARENESS = 'AWARENESS',
-  MOTIVATIONAL_LEARNING = 'MOTIVATIONAL_LEARNING',
-  OTHER = 'OTHER',
+  DecisionMaking = 'DECISION_MAKING',
+  Awareness = 'AWARENESS',
+  MotivationalLearning = 'MOTIVATIONAL_LEARNING',
+  Other = 'OTHER',
 }
 
 export enum DashboardPurpose {
-  STRATEGIC = 'STRATEGIC',
-  OPERATIONAL = 'OPERATIONAL',
-  ORGANIZATIONAL = 'ORGANIZATIONAL',
-  LEARNING = 'LEARNING',
+  Strategic = 'STRATEGIC',
+  Operational = 'OPERATIONAL',
+  Organizational = 'ORGANIZATIONAL',
+  Learning = 'LEARNING',
 }

@@ -1,4 +1,5 @@
 import { BasicColumnsInterface } from './BasicColumns';
+import { UserDatasetColumnInterface } from './UserDatasetColumn';
 
 export interface DatasetColumnInterface extends BasicColumnsInterface {
   id: number;
@@ -14,6 +15,7 @@ export interface DatasetColumnInterface extends BasicColumnsInterface {
   isForeignKey: boolean;
   distinctValues: number;
   isCount: boolean;
+  userDatasetColumns: UserDatasetColumnInterface[];
 }
 
 export enum DatasetColumnRole {

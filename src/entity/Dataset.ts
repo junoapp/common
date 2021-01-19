@@ -1,7 +1,9 @@
-import { DashboardInterface } from './Dashboard';
+import { BasicColumnsInterface } from './BasicColumns';
 import { DatasetColumnInterface } from './DatasetColumn';
+import { UserInterface } from './User';
+import { UserDatasetInterface } from './UserDataset';
 
-export interface DatasetInterface {
+export interface DatasetInterface extends BasicColumnsInterface {
   id: number;
   path: string;
   fieldname: string;
@@ -13,8 +15,6 @@ export interface DatasetInterface {
   filename: string;
   tableName: string;
   columns: DatasetColumnInterface[];
-  dashboard: DashboardInterface;
-
-  createdDate: Date;
-  updatedDate: Date;
+  userDatasets: UserDatasetInterface[];
+  addedBy: UserInterface;
 }

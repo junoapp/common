@@ -1,19 +1,22 @@
-export interface UserInterface {
+import { BasicColumnsInterface } from './BasicColumns';
+import { DatasetInterface } from './Dataset';
+import { UserDatasetInterface } from './UserDataset';
+
+export interface UserInterface extends BasicColumnsInterface {
   id: number;
   name: string;
   disability?: UserDisability;
   visLiteracy: UserVisLiteracy;
-
-  createdDate: Date;
-  updatedDate: Date;
+  datasets: DatasetInterface[];
+  userDatasets: UserDatasetInterface[];
 }
 
 export enum UserDisability {
-  COLOR_BLIND = 'COLOR_BLIND',
+  ColorBlind = 'COLOR_BLIND',
 }
 
 export enum UserVisLiteracy {
-  low = 'LOW',
-  medium = 'MEDIUM',
-  high = 'HIGH',
+  Low = 'LOW',
+  Medium = 'MEDIUM',
+  High = 'HIGH',
 }
