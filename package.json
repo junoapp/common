@@ -18,7 +18,8 @@
     "prepare": "tsdx build",
     "size": "size-limit",
     "analyze": "size-limit --why",
-    "yalc:publish": "yalc publish"
+    "yalc:publish": "yalc publish",
+    "yalc:update": "yarn yalc:publish && (cd ../server && yarn yalc:update && cd ../client && yarn yalc:update)"
   },
   "peerDependencies": {},
   "husky": {

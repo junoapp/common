@@ -10,4 +10,15 @@ export interface UserDatasetColumnInterface extends BasicColumnsInterface {
   index: number;
   userDataset: UserDatasetInterface;
   column: DatasetColumnInterface;
+  aggregate?: DatasetSchemaAggregateFunction;
+}
+
+export enum DatasetSchemaAggregateFunction {
+  None = 'NONE',
+  Min = 'MIN',
+  Mean = 'MEAN',
+  Sum = 'SUM',
+  Bin = 'BIN',
+  Max = 'MAX',
+  Median = 'MEDIAN',
 }
