@@ -7,4 +7,5 @@ export type JunoMark =
   | 'multiple-line'
   | 'stacked-vertical-bar'
   | 'stacked-horizontal-bar'
-  | 'heatmap';
+  | 'heatmap'
+  | 'geo-lat-lng';

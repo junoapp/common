@@ -1,6 +1,7 @@
 import { BasicColumnsInterface } from './BasicColumns';
 import { DatasetInterface } from './Dataset';
 import { UserDatasetInterface } from './UserDataset';
+import { UserPreferencesInterface } from './UserPreferences';
 
 export interface UserInterface extends BasicColumnsInterface {
   id: number;
@@ -9,6 +10,7 @@ export interface UserInterface extends BasicColumnsInterface {
   visLiteracy: UserVisLiteracy;
   datasets: DatasetInterface[];
   userDatasets: UserDatasetInterface[];
+  preferences: UserPreferencesInterface;
 }
 
 export enum UserDisability {
