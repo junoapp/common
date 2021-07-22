@@ -1,6 +1,7 @@
 import { FacetedUnitSpec, TopLevel } from 'vega-lite/build/src/spec';
 
 import { DatasetColumnInterface } from '../entity/DatasetColumn';
+import { UserDatasetColumnInterface } from '../entity/UserDatasetColumn';
 import { JunoMark } from './JunoMark';
 
 export type DashboardRecommendation = {
@@ -20,9 +21,13 @@ export type DatasetRecommendation = Omit<TopLevel<FacetedUnitSpec>, 'mark'> & {
   value: string;
   dimension: DatasetColumnInterface;
   measure: DatasetColumnInterface;
+  secondDimension?: DatasetColumnInterface;
   trimValues: boolean;
   multipleLines?: DatasetRecommendationMultipleLines;
   geoFile?: string;
+  userDimension: UserDatasetColumnInterface;
+  userMeasure: UserDatasetColumnInterface;
+  userSecondDimension?: UserDatasetColumnInterface;
 };
 
 export type DatasetRecommendationMultipleLines = {

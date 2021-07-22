@@ -12,4 +12,5 @@ export * from './dto/DatasetChartSpec';
 export * from './dto/UserAdd';
 export * from './dto/DashboardUpdate';
 export * from './util';
+export * from './utils/expanded-type';
 export * from './dto/JunoMark';
