@@ -136,8 +136,14 @@ export function getExpandedType(columnArray: any[], data: any[]) {
           expandedType = DatasetColumnExpandedType.GEO;
         }
       } else {
-        if (name.toLowerCase().includes(geoType)) {
-          expandedType = DatasetColumnExpandedType.GEO;
+        if (geoType.length <= 4) {
+          if (name.toLowerCase() === geoType) {
+            expandedType = DatasetColumnExpandedType.GEO;
+          }
+        } else {
+          if (name.toLowerCase().includes(geoType)) {
+            expandedType = DatasetColumnExpandedType.GEO;
+          }
         }
       }
     }

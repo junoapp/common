@@ -25,8 +25,8 @@ export type DatasetRecommendation = Omit<TopLevel<FacetedUnitSpec>, 'mark'> & {
   trimValues: boolean;
   multipleLines?: DatasetRecommendationMultipleLines;
   geoFile?: string;
-  userDimension: UserDatasetColumnInterface;
-  userMeasure: UserDatasetColumnInterface;
+  userDimension?: UserDatasetColumnInterface;
+  userMeasure?: UserDatasetColumnInterface;
   userSecondDimension?: UserDatasetColumnInterface;
 };
 
