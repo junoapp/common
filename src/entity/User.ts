@@ -6,7 +6,7 @@ import { UserPreferencesInterface } from './UserPreferences';
 export interface UserInterface extends BasicColumnsInterface {
   id: number;
   name: string;
-  disability?: UserDisability;
+  disability?: string;
   visLiteracy: UserVisLiteracy;
   datasets: DatasetInterface[];
   userDatasets: UserDatasetInterface[];

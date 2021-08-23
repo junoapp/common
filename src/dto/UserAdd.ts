@@ -1,7 +1,7 @@
-import { UserDisability, UserVisLiteracy } from '../entity/User';
+import { UserVisLiteracy } from '../entity/User';
 
 export interface UserDTO {
   name: string;
-  disability?: UserDisability;
+  disability?: string;
   visLiteracy: UserVisLiteracy;
 }
