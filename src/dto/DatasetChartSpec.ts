@@ -14,6 +14,7 @@ export interface DatasetChartSpec {
     | DatasetGeoChartSpecValues[];
   axis?: DatasetRecommendationMultipleLinesAxis;
   geofile?: string;
+  keysTitle?: string[];
 }
 
 export interface DatasetChartSpecValues {
