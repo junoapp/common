@@ -11,6 +11,7 @@ export interface UserDatasetColumnInterface extends BasicColumnsInterface {
   userDataset: UserDatasetInterface;
   column: DatasetColumnInterface;
   aggregate?: DatasetSchemaAggregateFunction;
+  numberType: DatasetColumnNumberType;
 }
 
 export enum DatasetSchemaAggregateFunction {
@@ -21,4 +22,11 @@ export enum DatasetSchemaAggregateFunction {
   Bin = 'BIN',
   Max = 'MAX',
   Median = 'MEDIAN',
+}
+
+export enum DatasetColumnNumberType {
+  NONE = 'none',
+  DOLAR = 'dolar',
+  REAL = 'real',
+  PERCENT = 'percent',
 }

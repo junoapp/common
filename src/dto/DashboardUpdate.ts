@@ -1,6 +1,9 @@
 import { DashboardGoal, DashboardPurpose } from '../entity/Dashboard';
 import { DatasetColumnRole } from '../entity/DatasetColumn';
-import { DatasetSchemaAggregateFunction } from '../entity/UserDatasetColumn';
+import {
+  DatasetColumnNumberType,
+  DatasetSchemaAggregateFunction,
+} from '../entity/UserDatasetColumn';
 
 export interface DashboardInsert {
   datasetId: number;
@@ -27,4 +30,5 @@ export interface DashboardUpdateColumn {
   role?: DatasetColumnRole;
   removed: boolean;
   aggregate?: DatasetSchemaAggregateFunction;
+  numberType?: DatasetColumnNumberType;
 }

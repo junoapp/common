@@ -1,3 +1,4 @@
+import { DatasetColumnNumberType, DatasetSchemaAggregateFunction } from '..';
 import {
   DatasetRecommendationMultipleLinesAxis,
   DatasetRecommendationMultipleLinesData,
@@ -15,6 +16,8 @@ export interface DatasetChartSpec {
   axis?: DatasetRecommendationMultipleLinesAxis;
   geofile?: string;
   keysTitle?: string[];
+  aggregate?: DatasetSchemaAggregateFunction;
+  numberType?: DatasetColumnNumberType;
 }
 
 export interface DatasetChartSpecValues {
